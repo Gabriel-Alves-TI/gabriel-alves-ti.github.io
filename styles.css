@@ -127,7 +127,8 @@ section.topo-do-site .flex{
 }
 
 .topo-do-site img{
-  zoom: 1.5;
+  width: 400px;
+  zoom: 1.2;
 }
 
 /* ESTILO MEUS PROJETOS */
