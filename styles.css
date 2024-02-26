@@ -1,4 +1,8 @@
 /* ESTILOS GERAIS */
+html {
+
+  scroll-behavior: smooth !important;
+}
 
 *{
     margin: 0;
@@ -34,13 +38,14 @@ body {
   border: 0;
   border-radius: 30px;
   cursor: pointer;
+  transition: .4s all;
 } 
 
 
 button:hover{
   box-shadow: 0px 0px 10px rgb(173, 230, 227);
   transform: scale(1.10);
-  transition: .2s;
+  transition: .4s all;
 }
 
 footer{
@@ -48,7 +53,17 @@ footer{
   background-color: rgb(5, 252, 252);
   background-image: linear-gradient(rgb(5, 252, 252), rgb(4, 48, 48))
 }
-  
+
+::-webkit-scrollbar{
+  width: 20px;
+  background-color: #7d7d7d1a;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar-thumb{
+  border-radius: 20px;
+  background-color: rgb(5, 252, 252);
+}
 
 /* ESTILO DO CABEÇALHO */
 
@@ -66,12 +81,13 @@ header a{
   color: #7d7d7d;
   text-decoration: none;
   display: inline-block;
+  transition: .4s all;
 }
 
 header a:hover{
   color: #fff;
   transform: scale(1.15);
-  transition: .2s;
+  transition: .4s all;
 }
 
 header nav ul{
@@ -101,14 +117,13 @@ section .topo-do-site{
 section.topo-do-site .flex{
   align-items: center;
   justify-content: center;
-  gap: 100px;
+  gap: 150px;
 }
 
 .topo-do-site h1{
-  color:#fff;
   font-size: 42px;
   line-height: 60px;
-  margin-top: 60px;
+  margin-top: 80px;
 }
 
 .topo-do-site .txt-topo-site h1 span{
@@ -129,6 +144,7 @@ section.topo-do-site .flex{
 .topo-do-site img{
   width: 400px;
   zoom: 1.2;
+  margin-right: 0;
 }
 
 /* ESTILO MEUS PROJETOS */
@@ -159,12 +175,13 @@ section.projetos .flex{
   color: #fff;
   padding: 40px;
   border-radius: 20px;
+  transition: .5s all;
 }
 
 .projetos .projetos_box:hover{
   color: #fff;
   background-color: rgb(11, 12, 12);
-  transition: .5s;
+  transition: .5s all;
   transform: scale(1.05);
   box-shadow: 0 0 20px rgb(5, 252, 252);
 }
@@ -190,10 +207,10 @@ section.sobre .flex{
   gap: 60px;
 }
 
-section.sobre .txt-sobre h1{
-  margin-bottom: 80px;
-  margin-left: -350px;
-  font-size: 50px;
+section.sobre .img-sobre h1{
+  margin-bottom: 40px;
+  margin-left: 0;
+  font-size: 40px;
 }
 
 section.sobre .img-sobre span{
@@ -202,15 +219,14 @@ section.sobre .img-sobre span{
 }
 
 section.sobre .img-sobre img{
-  margin-top: 80px;
   border-radius: 50px;
   width: 300px;
 }
 
 .sobre .txt-sobre h2{
   font-size: 40px;
-  line-height: 40px;
-  margin-bottom: 30px;
+  line-height: 30px;
+  margin-top: 40px;
 }
 
 .sobre .txt-sobre p{
@@ -226,7 +242,7 @@ section.sobre .img-sobre img{
   background-color: rgb(5, 252, 252);
   font-size: 22px;
   cursor: pointer;
-  margin: 0 5px;
+  margin: 0 20px;
 }
 
 
@@ -258,7 +274,8 @@ section.contato .flex{
   background-color: rgb(5, 252, 252);
   font-size: 40px;
   cursor: pointer;
-  margin: 0 10px;
+  margin: 0 15px;
+  transition: .4s all;
 }
 
 .contato .btn_contato {
@@ -266,23 +283,54 @@ section.contato .flex{
   margin-top: 40px;
 }
 
-.contato .txt-contato h1 span{
-  color: rgb(5, 252, 252);
-  font-size: 50px;
+.contato .txt-contato h1{
+  margin-top: 60px;
+  font-size: 60px;
+  text-align: center;
 }
 
-.contato .img-contato{
-  margin-top: 80px;
-  border-radius: 40px;
+.contato .flex .img-contato{
+  text-align: center;
 }
 
 .contato img{
-  border-radius: 100px;
-  border: 50px;
-  zoom: 1.5;
-  margin-left: 50px;
-  margin-bottom: 50px;
+  width: 400px;
 }
+
+.contato .txt-contato .btn_social{
+  padding: 80px;
+  transition: .5s all;
+}
+
+.contato .txt-contato .btn_social button:hover{
+  box-shadow: 0px 0px 30px rgb(173, 230, 227);
+  transition: .4s all;
+}
+
+/* ESTILO BOTÃO DE RETORNO TOPO */
+.topo{
+  background-color: rgb(5, 252, 252);
+  position: fixed;
+  bottom: 80px;
+  right: -500px;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .5s all;
+}
+
+.topo img{
+  width: 70%;
+}
+
+.show-button .topo{
+  right: 20px;
+  transition: .5s all;
+}
+
 
 /* RESPONSIVO */
 
@@ -306,6 +354,15 @@ section.contato .flex{
     display: none;
   }
 
+  header{
+    padding: 30px 4%;
+  }
+
+  header .interface .logo img{
+    margin-left: -60px;
+    zoom: 1.5;
+  }
+
   /* TOPO DO SITE */
 
   section.topo-do-site{
@@ -315,14 +372,11 @@ section.contato .flex{
   .topo-do-site h1{
     font-size: 32px;
     line-height: 50px;
+    margin: 0;
   }
 
-  .topo-do-site img{
+  .topo-do-site .img-topo-site img{
     width: 100%;
-  }
-
-  section.topo-do-site .flex{
-    gap: 40px;
   }
   
   /* ESTILO PROJETOS */
@@ -396,5 +450,29 @@ section.contato .flex{
   .contato .txt-contato .btn_social{
     text-align: center;
     padding: 40px;
+  }
+
+  /* ESTILO BOTÃO DE RETORNO TOPO */
+  .topo{
+    background-color: rgb(5, 252, 252);
+    position: fixed;
+    bottom: 570px;
+    right: -500px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .5s all;
+  }
+
+  .topo img{
+    width: 70%;
+  }
+
+  .show-button .topo{
+    right: 20px;
+    transition: .5s all;
   }
 }
