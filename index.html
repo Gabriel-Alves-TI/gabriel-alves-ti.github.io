@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
+    <header id="topo">
         <div class="interface">
             <div class="logo">
                 <a href="#"></a>
@@ -33,7 +33,7 @@
             </nav>
 
             <div class="btn_contato">
-                <a href="/contato/contato.html" target="_blank">
+                <a href="#link-contato" class="btn">
                     <button>Contato</button>
                 </a>
             </div> <!--btn-contato-->
@@ -44,18 +44,13 @@
             <div class="interface">
                 <div class="flex">
                     <div class="txt-topo-site">
-                        <h1>SEJA BEM-VINDO!<br> Meu nome é Gabriel Alves e sou desenvolvedor <span>BACK-END.</span></h1>
+                        <h1>SEJA BEM-VINDO!<br> Me chamo Gabriel Alves e sou desenvolvedor <span>BACK-END.</span></h1>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt consequatur rerum unde, at tempora tenetur qui adipisci harum facilis corporis repellendus in voluptatum delectus. Rem id reiciendis illum nostrum aliquam!</p>
 
-                        <div class="btn_contato">
-                            <a href="#">
-                                <button>Entre em contato</button>
-                            </a>
-                        </div>
                     </div><!--txt-topo-site-->
 
                     <div class="img-topo-site">
-                        <img width=300 src="/imagens/Gabriel-editada02.png" alt="Foto Gabriel Alves">
+                        <img src="/imagens/Gabriel-editada02.png" alt="Foto Gabriel Alves">
                     </div><!--img-topo-site-->
                 </div><!--flex-->
             </div><!--interface-->
@@ -105,7 +100,7 @@
         <section class="contato">
             <div class="interface">
                 <div class="flex">
-                    <div class="txt-contato">
+                    <div id="link-contato" class="txt-contato">
                         <h1>Contato</h1>
                     <div class="img-contato">
                         <img src="/imagens/Emails-amico.png" alt="Foto Gabriel Alves">
@@ -117,18 +112,22 @@
                             <a href="https://github.com/Gabriel-Alves-TI" target="_blank"><button><i class="bi bi-envelope-at-fill"></i></button></a>
                             <a href="#"><button><i class="bi bi-whatsapp"></i></button></a>
                         </div><!--btn-social-->
-
-                        <div class="btn_contato">
-                            <a href="#">
-                                <button>Entre em contato</button>
-                            </a>
-                        </div>
                     </div><!--txt-contato-->
-                    
                 </div><!--flex-->
             </div><!--interface-->
         </section><!--topo-do-site-->
     </main>
-    <footer></footer>
+    
+    <footer>
+        <div data-scroll="suave" data-anima="scroll">
+            <a href="#topo">
+                <div class="topo">
+                    <img src="/imagens/arrow-up.png" alt="Voltar ao topo">
+                </div>
+            </a>
+        </div>
+    </footer>
+    <script src="/scroll-animation.js"></script>
+    <script src="/scroll-suave.js"></script>
 </body>
 </html>
